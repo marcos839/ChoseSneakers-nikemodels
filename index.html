@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="logo - Copia - Copia.png" type="image/png">
+    <title>Nike Models</title>
+</head>
+<body>
+
+    <p>Chose <br>Sneakers</p>
+    <header>
+    <h4>Models Nike</h4>
+    </header>
+
+                
+        <button class="menu-btn" onclick="abrirMenu()">
+            >
+        </button>
+
+        <div class="overlay" id="overlay" onclick="fecharMenu()"></div>
+
+        <nav class="menu-lateral" id="menuLateral">
+            <button class="fechar-btn" onclick="fecharMenu()">
+                &times;
+            </button>
+
+            <h4>categoria de marcas</h4>
+
+            <a href="#">Todas</a>
+            <a href="#">Nike</a>
+            <a href="#">Under Armor</a>
+            <a href="#">Puma</a>
+            <a href="#">Anta</a>
+            <a href="#">New Balance</a>
+            <a href="#">Mizuno</a>
+            <a href="#">Adidas</a>
+            <a href="#">Li-Ning</a>
+            <a href="#">361</a>
+        </nav>
+    <div class="container">
+        <button onclick="abrirModelo('Air Max')">
+            Nike Air Max
+        </button>
+
+        <button onclick="abrirModelo('Air Force 1')">
+            Nike Air Force 1
+        </button>
+
+        <button onclick="abrirModelo('Dunk')">
+            Nike Dunk
+        </button>
+
+        <button onclick="abrirModelo('Air Jordan 1')">
+            Nike Air Jodan 1
+        </button>
+
+        <button onclick="abrirModelo('Blazer')">
+            Nike Blazer
+        </button>
+    </div>
+
+    <script>
+        const menu = document.getElementById("menuLateral");
+        const overlay = document.getElementById("overlay");
+
+        function abrirMenu() {
+            menu.classList.add("aberto")
+            overlay.classList.add("aberto")
+        }
+
+        function fecharMenu() {
+            menu.classList.remove("aberto")
+            overlay.classList.remove("aberto")
+        }
+
+        function abrirModelo(modelo) {
+            alert("você escolheu: Nike " + modelo);
+        }
+    </script>
+</body>
+</html>
